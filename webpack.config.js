@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "index.js",
+    publicPath: "/LINE-Deco-SimpleFrame/",
   },
   resolve: {
     extensions: [".js", ".json", ".css"],
@@ -15,7 +16,6 @@ module.exports = {
   module: {
     rules: [
       {
-        // Load CSS files. They can be imported into JS files.
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
@@ -27,6 +27,6 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: "./dist", // 静的ファイルを配布するディレクトリを指定
+    static: "./dist",
   },
 };
